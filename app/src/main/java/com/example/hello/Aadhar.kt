@@ -1,5 +1,3 @@
-package com.example.hello
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -30,20 +28,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-
+import com.example.hello.R
 
 @Composable
 fun getstarted(
-
     navComposable: NavHostController,
-    modifier: Modifier=Modifier
+    modifier: Modifier = Modifier
 ){
 
     Box(
         modifier = modifier.fillMaxSize()
     ){
         //BackGround Image
-        Image(painter = painterResource(id=R.drawable.background),
+        Image(painter = painterResource(id= R.drawable.background),
             contentDescription =null,
             contentScale = ContentScale.FillHeight,
             modifier = Modifier.fillMaxSize()
@@ -60,14 +57,11 @@ fun getstarted(
         ){
             Image(painter = painterResource(id = R.drawable.niramaya_logo_black),
                 contentDescription = null,
-
-
                 modifier = Modifier
                     .size(180.dp)
                     .width(300.10.dp)
                     .height(47.7.dp)
-                    .offset(x =(0).dp,y=-40.dp)
-
+                    .offset(x =(60).dp,y=-40.dp)
 
             )
             Box(
@@ -104,26 +98,26 @@ fun getstarted(
 
             Spacer(modifier = Modifier.weight(1f)
                 .offset(x=0.dp,y=-400.dp))
-                    Button(onClick = {/*TODO*/ },
-                        shape = MaterialTheme.shapes.large,
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF7C7D7D)
-                        ),
-                        modifier = Modifier.fillMaxWidth().height(52.dp).offset(0.dp,-15.dp)
-                        ){
-                        Text(text = "Let's Get Startd",
+            Button(onClick = {/*TODO*/ },
+                shape = MaterialTheme.shapes.large,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF7C7D7D)
+                ),
+                modifier = Modifier.fillMaxWidth().height(52.dp)
+            ){
+                Text(text = "Contunie",
 
-                            style = TextStyle(
-                                fontSize = 24.sp,
-                                fontWeight = FontWeight(500),
-                                color = Color.Black,
+                    style = TextStyle(
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight(500),
+                        color = Color.Black,
 
-                            )
                         )
+                )
 
 
 
-                    }
+            }
 
 
 
@@ -132,8 +126,9 @@ fun getstarted(
 
     }
 }
+
 @Preview(showBackground = true, widthDp = 320, heightDp = 640)
 @Composable
 fun getstartedPreview(){
-    getstarted(rememberNavController())
+    com.example.hello.getstarted(rememberNavController())
 }
