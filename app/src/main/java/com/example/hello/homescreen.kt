@@ -92,7 +92,7 @@ fun homescreen(
             Text(
                 "______________________",
                 modifier = modifier
-                    .offset(x = -120.dp, y = -75.dp)
+                    .offset(x = -120.dp, y = -73.dp)
             )
 
             Text(
@@ -101,7 +101,7 @@ fun homescreen(
                 fontSize = 14.sp,
                 color = Color.Black,
                 modifier = modifier
-                    .offset(y = -90.dp)
+                    .offset(y = -85.dp)
             )
 
             // Phone Number Text Field
@@ -114,12 +114,12 @@ fun homescreen(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFF7C7D7D)
                 ),
-                modifier = Modifier.fillMaxWidth().height(52.dp).offset(0.dp,-15.dp)
+                modifier = Modifier.fillMaxWidth().height(40.dp).offset(0.dp,-15.dp)
             ){
                 Text(text = "Continue",
 
                     style = TextStyle(
-                        fontSize = 24.sp,
+                        fontSize = 20.sp,
                         fontWeight = FontWeight(500),
                         color = Color.Black,
 
@@ -150,7 +150,7 @@ fun PhoneNumberTextField() {
             .fillMaxWidth()
             .padding(horizontal = 16.dp)
             .height(56.dp)
-            .offset(x=0.dp,y=-50.dp)
+            .offset(x=0.dp,y=-50.dp),
     )
 }
 
