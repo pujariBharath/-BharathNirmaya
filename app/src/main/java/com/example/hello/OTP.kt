@@ -75,7 +75,6 @@ fun OTP(
                     .offset(y = -150.dp)
             )
             Box(
-                contentAlignment = Alignment.TopEnd
             ) {
                 Image(
                     painter = painterResource(R.drawable.otpverification),
@@ -148,6 +147,17 @@ fun OTP(
                     ),
                 modifier = modifier.offset(x=-30.dp,y = 30.dp)
             )
+            @Composable
+            fun SignInButton(onClick: () -> Unit) {
+                Button(
+                    onClick = onClick,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                ){
+
+                }
+            }
 
             Button(onClick = {/*TODO*/ },
                 shape = MaterialTheme.shapes.large,
